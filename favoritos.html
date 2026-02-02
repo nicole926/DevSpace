@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="educacao-online.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <title>DevSpace</title>
+</head>
+<body>
+    <header id="inicio"></header>
+
+
+    <nav>
+        <h1>DevSpace</h1>
+        <div class="nav-links">
+            <a href="index.html">Início🏠︎</a>
+            <a href="#inicio">Cursos🕮</a>
+            <a href="#">Favoritos❤︎</a>
+            <a href="fale_conosco.html">Fale Conosco☏</a>
+        </div>
+    </nav>
+
+    <section class="header-cursos">
+    <h1 class="titulo-cursos">Favoritos❤︎</h1>
+    </section>
+
+
+    <footer>
+        <div class="footer-logo">
+            <img src="img/educacao-online.png">
+            <h2>DevSpace</h2>
+            <a href="#inicio">Início</a>
+            <a href="#">Fale Conosco</a>
+        </div>
+
+        <div class="footer-container">
+            <a href="#"><img src="img/instagram (1).png"></a>
+            <a href="#"><img src="img/github.png"></a>
+            <a href="#"><img src="img/sinal-do-linkedin (1).png"></a>
+        </div>
+    </footer>
+
+    <script>
+const container = document.getElementById("lista-favoritos");
+
+function pegarFavoritos() {
+  return JSON.parse(localStorage.getItem("favoritos")) || [];
+}
+
+function salvarFavoritos(lista) {
+  localStorage.setItem("favoritos", JSON.stringify(lista));
+}
+
+function renderizar() {
+  const favoritos = pegarFavoritos();
+  container.innerHTML = "";
+
+  favoritos.forEach(curso => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <h3>${curso.titulo}</h3>
+      <button class="btn-remover">🗑️</button>
+    `;
+
+    div.querySelector(".btn-remover").onclick = () => {
+      const novaLista = favoritos.filter(c => c.id !== curso.id);
+      salvarFavoritos(novaLista);
+      renderizar();
+    };
+
+    container.appendChild(div);
+  });
+}
+
+renderizar();
+</script>
+
+
+</body>
+</html>

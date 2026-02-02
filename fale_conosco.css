@@ -1,0 +1,170 @@
+:root{
+    --gold: #F2B90C;
+    --azul1: #DFF2F2;
+    --azul2: #A4BFBF;
+    --azul3: #377D8C;
+    --azul4: #225C73;
+    --font3: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font3);
+}
+
+body {
+  background: linear-gradient(var(--azul4), var(--azul3), var(--azul2));
+  color: #fff;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =====================
+   TOPO
+===================== */
+.topo {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+
+.topo h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.topo p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* =====================
+   BOTÃO VOLTAR
+===================== */
+.btn-voltar {
+  display: inline-block;
+  margin: 0 auto 30px;
+  padding: 10px 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* Centraliza */
+.btn-voltar {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 15px;
+}
+
+/* Hover */
+.btn-voltar:hover {
+  background: #ffffff;
+  color: #3b34ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  flex: 1;               
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+/* =====================
+   FORMULÁRIO
+===================== */
+.form-contato {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* CAMPOS */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.campo label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* FOCO */
+.campo input:focus,
+.campo textarea:focus {
+  outline: 2px solid #ffffffaa;
+}
+
+/* BOTÃO */
+.form-contato button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  background: #ffffff;
+  color: #3b34ff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-contato button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 600px) {
+  .topo h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-contato {
+    padding: 30px 20px;
+  }
+}

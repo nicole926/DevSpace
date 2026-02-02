@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="educacao-online.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursos.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,57 +13,188 @@
     <title>DevSpace</title>
 </head>
 <body>
+    <header id="inicio"></header>
+
 
     <nav>
         <h1>DevSpace</h1>
         <div class="nav-links">
-            <a href="#inicio">Início🏠︎</a>
-            <a href="#">Cursos🕮</a>
+            <a href="index.html">Início🏠︎</a>
+            <a href="#inicio">Cursos🕮</a>
             <a href="#">Favoritos❤︎</a>
-            <a href="#">Fale Conosco☏</a>
+            <a href="fale_conosco.html">Fale Conosco☏</a>
         </div>
     </nav>
 
-    <main class="main-cursos">
+    <section class="header-cursos">
     <h1 class="titulo-cursos">Cursos🕮</h1>
+    </section>
+
 
     <section class="card-section animate">
         <div class="card-container">
-            <div class="card">
-                <img src="img/lógica-de-prog.png">
-                <p>Lógica de programação</p>
+            <div class="curso" data-id="1" data-titulo="introducao-mobile">
+                <div class="card">
+                    <img src="img/introdução-mobile.png">
+                    <h3>Introdução Mobile</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/programacao.png">
-                <p>Algoritmos</p>
+            <div class="curso" data-id="1" data-titulo="Administração de Banco de Dados">
+                <div class="card">
+                    <img src="img/banco-de-dadoslogo.png">
+                    <h3>Administração de Banco de Dados I</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/html-css.png">
-                <p>HTML e CSS</p>
+            <div class="curso" data-id="1" data-titulo="Administração de Banco de Dados">
+                <div class="card">
+                    <img src="img/banco-de-dadoslogo.png">
+                    <h3>Administração de Banco de Dados II</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/javascript.png">
-                <p>JavaScript</p>
+            <div class="curso" data-id="1" data-titulo="Administração de Banco de Dados">
+                <div class="card">
+                    <img src="img/banco-de-dadoslogo.png">
+                    <h3>Administração de Banco de Dados III</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/pythonlogo.png">
-                <p>Python</p>
+            <div class="curso" data-id="1" data-titulo="algoritmos">
+                <div class="card">
+                    <img src="img/lógica-de-prog.png">
+                    <h3>Algorítmos</h3>
+                    <p>Duração: 10h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/banco-de-dadoslogo.png">
-                <p>Banco de Dados</p>
+            <div class="curso" data-id="1" data-titulo="html-css">
+                <div class="card">
+                    <img src="img/html-css.png">
+                    <h3>HTML e CSS I</h3>
+                    <p>Duração: 20h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/introdução-mobile.png">
-                <p>Mobile</p>
+            <div class="curso" data-id="1" data-titulo="html-css">
+                <div class="card">
+                    <img src="img/html-css.png">
+                    <h3>HTML e CSS II</h3>
+                    <p>Duração: 20h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
-            <div class="card">
-                <img src="img/seguranca-da-internet.png">
-                <p>Segurança</p>
+            <div class="curso" data-id="1" data-titulo="javascript">
+                <div class="card">
+                    <img src="img/javascript.png">
+                    <h3>JavaScript - Fundamentos Iniciais</h3>
+                    <p>Duração: 5h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="html-css-js">
+                <div class="card">
+                    <img src="img/programacao.png">
+                    <h3>HTML, CSS e JavaScript</h3>
+                    <p>Duração: 30h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="python">
+                <div class="card">
+                    <img src="img/pythonlogo.png">
+                    <h3>POO Python I</h3>
+                    <p>Duração: 10h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="python">
+                <div class="card">
+                    <img src="img/pythonlogo.png">
+                    <h3>POO Python II</h3>
+                    <p>Duração: 10h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="python">
+                <div class="card">
+                    <img src="img/pythonlogo.png">
+                    <h3>POO Python III</h3>
+                    <p>Duração: 10h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="Banco-de-Dados">
+                <div class="card">
+                    <img src="img/banco-de-dadoslogo.png">
+                    <h3>MySQL I</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="Banco-de-Dados">
+                <div class="card">
+                    <img src="img/banco-de-dadoslogo.png">
+                    <h3>MySQL II</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="Banco-de-Dados">
+                <div class="card">
+                    <img src="img/banco-de-dadoslogo.png">
+                    <h3>MySQL III</h3>
+                    <p>Duração: 15h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
+            </div>
+            <div class="curso" data-id="1" data-titulo="seguranca-da-internet">
+                <div class="card">
+                    <img src="img/seguranca-da-internet.png" alt="">
+                    <h3>Segurança da informação</h3>
+                    <p>Duração: 30h</p>
+                    <button class="btn-favorito">
+                        🤍
+                    </button>
+                </div>
             </div>
         </div>
     </section>
-</main>
 
 
     <footer>
