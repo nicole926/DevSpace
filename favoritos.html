@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="educacao-online.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursos.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +20,8 @@
         <h1>DevSpace</h1>
         <div class="nav-links">
             <a href="index.html">Início🏠︎</a>
-            <a href="#inicio">Cursos🕮</a>
-            <a href="#">Favoritos❤︎</a>
+            <a href="cursos.html">Cursos🕮</a>
+            <a href="#inicio">Favoritos❤︎</a>
             <a href="fale_conosco.html">Fale Conosco☏</a>
         </div>
     </nav>
@@ -29,6 +29,13 @@
     <section class="header-cursos">
     <h1 class="titulo-cursos">Favoritos❤︎</h1>
     </section>
+
+    <section class="card-section">
+      <div class="card-container" id="lista-favoritos">
+        <!-- cards criados via JS -->
+      </div>
+    </section>
+
 
 
     <footer>
@@ -46,41 +53,7 @@
         </div>
     </footer>
 
-    <script>
-const container = document.getElementById("lista-favoritos");
-
-function pegarFavoritos() {
-  return JSON.parse(localStorage.getItem("favoritos")) || [];
-}
-
-function salvarFavoritos(lista) {
-  localStorage.setItem("favoritos", JSON.stringify(lista));
-}
-
-function renderizar() {
-  const favoritos = pegarFavoritos();
-  container.innerHTML = "";
-
-  favoritos.forEach(curso => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <h3>${curso.titulo}</h3>
-      <button class="btn-remover">🗑️</button>
-    `;
-
-    div.querySelector(".btn-remover").onclick = () => {
-      const novaLista = favoritos.filter(c => c.id !== curso.id);
-      salvarFavoritos(novaLista);
-      renderizar();
-    };
-
-    container.appendChild(div);
-  });
-}
-
-renderizar();
-</script>
-
+    <script src="favoritos.js"></script>
 
 </body>
 </html>
