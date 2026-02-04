@@ -157,6 +157,18 @@ nav a:hover::after{
     gap: 30px;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link:hover .card {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 /* ================= CARD ================= */
 .conteudo {
     width: 100%;
