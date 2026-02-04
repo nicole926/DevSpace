@@ -69,7 +69,7 @@ body {
 /* Hover */
 .btn-voltar:hover {
   background: #ffffff;
-  color: #3b34ff;
+  color: var(--azul4);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
@@ -134,7 +134,7 @@ body {
   border: none;
   border-radius: 25px;
   background: #ffffff;
-  color: #3b34ff;
+  color: var(--azul4);
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;

@@ -158,6 +158,14 @@ nav a:hover::after{
 }
 
 /* ================= CARD ================= */
+.conteudo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .card{
     position: relative;
     background: var(--azul1);
@@ -194,26 +202,32 @@ nav a:hover::after{
     overflow: hidden;
 
     line-height: 1.3;
-    min-height: 2.6em;
+    min-height: 2.4em;
 }
 
 /* ================= DURAÇÃO ================= */
-.card p{
+.card p {
     background: var(--azul3);
     color: var(--azul1);
     font-weight: 600;
 
-    padding: 12px;
+    width: 150px;     /* largura fixa e igual pra todos */
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 10px;
-    width: 100%;
 }
+
 
 /* ================= BOTÕES ================= */
 .btn-favorito,
 .btn-lixeira{
     position: absolute;
-    bottom: 5px;
-    left: 50%;
+    bottom: 280px;
+    left: 10%;
     transform: translateX(-50%);
 
     background: none;

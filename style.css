@@ -245,7 +245,7 @@ header{
 }
 
 .conteudoc{
-    background-color: #f2b90c70;
+    background: linear-gradient(to bottom, white, #f2b90c70);
     align-items: center;
     justify-items: center;
     padding: 80px 60px;

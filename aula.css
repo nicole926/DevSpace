@@ -1,0 +1,214 @@
+:root{
+    --gold: #F2B90C;
+    --azul1: #DFF2F2;
+    --azul2: #A4BFBF;
+    --azul3: #377D8C;
+    --azul4: #225C73;
+    --font3: 'Poppins', sans-serif;
+}
+
+/* ================= RESET ================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font3);
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ================= BODY ================= */
+body{
+    background-color: var(--azul1);
+    color: var(--azul4);
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+#inicio{
+    scroll-margin-top: 100px; /* altura do nav */
+}
+
+
+/* ================= NAV ================= */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: var(--azul2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav.shrink{
+    padding: 10px 60px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+nav h1{
+    font-size: 2.8rem;
+    transition: font-size 0.3s ease;
+}
+
+nav.shrink h1{
+    font-size: 2rem;
+}
+
+.nav-links{
+    display: flex;
+    gap: 15px;
+}
+
+nav a{
+    position: relative;
+    color: var(--azul4);
+    padding: 8px 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+nav a:hover{
+    color: var(--gold);
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+main{
+    max-width: 900px;      /* largura confortável de leitura */
+    margin: 0 auto;        /* centraliza na página */
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;             /* espaçamento entre aulas */
+
+    text-align: justify;
+}
+main h1{
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: justify;
+    text-align: center;
+}
+
+main img{
+    width: 100%;
+    max-width: 700px;   /* tamanho bom para vídeo */
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+    border-radius: 12px;
+
+    margin: 10px auto 20px;
+    display: block;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.concluido{
+    background: var(--azul3);
+    color: var(--azul1);
+
+    padding: 10px 20px;
+    border-radius: 25px;
+
+    font-weight: 600;
+    border: none;
+
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.concluido:hover{
+    background: var(--azul4);
+    transform: scale(1.05);
+}
+
+.aula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* 🔥 isso resolve tudo */
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+
+/* ================= FOOTER ================= */
+footer{
+    background-color: var(--azul3);
+    padding: 40px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer img{
+    width: 80px;
+    height: 80px;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo h2{
+    color: black;
+    font-size: 1.6rem;
+}
+
+.footer-logo a{
+    color: rgba(0,0,0,0.54);
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: 15px;
+}
+
+.footer-logo a:hover{
+    text-decoration: underline;
+}
+
+.footer-container{
+    display: flex;
+    gap: 15px;
+}
+
+.footer-container img{
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) opacity(0.65);
+    transition: 0.3s ease;
+}
+
+.footer-container img:hover{
+    filter: brightness(0) opacity(1);
+    transform: scale(1.15);
+}
