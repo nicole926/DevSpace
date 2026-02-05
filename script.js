@@ -21,3 +21,12 @@ const observer = new IntersectionObserver(entries => {
 });
 
 elements.forEach(el => observer.observe(el));
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flip');
+    });
+});
+

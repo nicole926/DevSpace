@@ -141,6 +141,11 @@ nav a:hover::after{
     padding: 40px 0 80px;
 }
 
+.curso{
+    position: relative;
+}
+
+
 /* ================= SEÇÃO DE CARDS ================= */
 .card-section{
     background-color: var(--azul2);
@@ -238,18 +243,21 @@ nav a:hover::after{
 .btn-favorito,
 .btn-lixeira{
     position: absolute;
-    bottom: 280px;
-    left: 10%;
-    transform: translateX(-50%);
+    top: 15px;
+    right: 15px;
 
-    background: none;
+    background: rgba(255,255,255,0.85);
     border: none;
-    font-size: 22px;
+    border-radius: 50%;
+    font-size: 20px;
     cursor: pointer;
-}
 
-.btn-favorito.ativo{
-    color: red;
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ================= ANIMAÇÃO ================= */

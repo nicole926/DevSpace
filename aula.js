@@ -26,28 +26,33 @@ const observer = new IntersectionObserver(entries => {
 elements.forEach(el => observer.observe(el));
 
 
-// ================= AULAS CONCLUÍDAS =================
+// ================= AULAS CONCLUÍDAS (TOGGLE) =================
 const botoes = document.querySelectorAll(".concluido");
 
 botoes.forEach(botao => {
     const aula = botao.dataset.aula;
-
-    // segurança: se não tiver data-aula, ignora
     if (!aula) return;
 
-    // se já estava concluída, restaura estado
-    if (localStorage.getItem(aula) === "true") {
-        marcarComoConcluido(botao);
-    }
+    // restaura estado salvo
+    const concluida = localStorage.getItem(aula) === "true";
+    atualizarBotao(botao, concluida);
 
     botao.addEventListener("click", () => {
-        marcarComoConcluido(botao);
-        localStorage.setItem(aula, "true");
+        const estadoAtual = botao.classList.contains("concluido-ok");
+        const novoEstado = !estadoAtual;
+
+        atualizarBotao(botao, novoEstado);
+        localStorage.setItem(aula, novoEstado);
     });
 });
 
-function marcarComoConcluido(botao) {
-    botao.classList.add("concluido-ok");
-    botao.textContent = "✔";
-    botao.disabled = true; // impede novo clique
+function atualizarBotao(botao, concluida) {
+    if (concluida) {
+        botao.classList.add("concluido-ok");
+        botao.textContent = "✔";
+    } else {
+        botao.classList.remove("concluido-ok");
+        botao.textContent = "Marcar como concluído";
+    }
 }
+
